@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  thumbnail: MyString
+  subscription_required: MyString
+  boolean: MyString
+
+two:
+  title: MyString
+  thumbnail: MyString
+  subscription_required: MyString
+  boolean: MyString
