@@ -16,10 +16,9 @@ ActiveRecord::Schema.define(version: 20170617201530) do
   create_table "videos", force: :cascade do |t|
     t.string   "title"
     t.string   "thumbnail"
-    t.string   "subscription_required"
-    t.string   "boolean"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.boolean  "subscription_required", default: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
   end
 
 end

@@ -3,8 +3,7 @@ class CreateVideos < ActiveRecord::Migration
     create_table :videos do |t|
       t.string :title
       t.string :thumbnail
-      t.string :subscription_required
-      t.string :boolean
+      t.boolean :subscription_required, default: false
 
       t.timestamps null: false
     end

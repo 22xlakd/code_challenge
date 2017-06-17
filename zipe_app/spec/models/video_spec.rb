@@ -1,11 +1,20 @@
 require 'spec_helper'
 
 describe Video, :type => :model do
-  before(:each) do
-    test = Video.create(id:1, title: "Almost Famous", subscription_required: false)
-  end
+  let(:first_video){ Video.create(title: "Almost Famous trailer", subscription_required: false) }
 
   it "finds a video" do
-    expect{ Video.find(1) }.not_to raise_error(ActiveRecord::RecordNotFound)
+    Video.create(id:1, title: "Finding Nemo")
+    expect{ Video.find(1) }.not_to raise_error
+  end
+
+  it "saves video successfully" do
+    test = Video.new(title: "My awesome video")
+
+    expect(test.save).to be true
+  end
+
+  it "deletes video" do
+    expect(Video.find(first_video.id).delete).to eq(first_video)
   end
 end
