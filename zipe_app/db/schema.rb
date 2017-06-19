@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20170617201530) do
 
   create_table "videos", force: :cascade do |t|
+    t.string   "identifier"
     t.string   "title"
     t.string   "thumbnail"
     t.boolean  "subscription_required", default: false
