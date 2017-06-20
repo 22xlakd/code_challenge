@@ -4,9 +4,8 @@ class SessionsController < ApplicationController
 
   def create
     user = User.get_api_user(params[:username], params[:password])
-    if user and user.authenticate()
-      env[:current_user] = user
-      set_current_user
+    if user and user.authenticate(params[:password])
+      session[:user_id] = user.id
 
       redirect_to video_url(params[:video_id])
     else
@@ -15,9 +14,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    env[:current_user] = nil
-    logout
+    session[:user_id] = nil
 
-    redirect_to store_url, notice: "Logged out"
+    redirect_to root_url, notice: "Logged out"
   end
 end

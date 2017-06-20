@@ -16,7 +16,7 @@
 </p>
 
 <% if @video.subscription_required %>
-  <% if @current_user %>
+  <% if session[:user_id] %>
     <%= video_player(@video) %>
   <% else %>
     <div>

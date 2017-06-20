@@ -4,8 +4,8 @@ describe Video, :type => :model do
   let(:first_video){ Video.create(title: "Almost Famous trailer", subscription_required: false) }
 
   it "finds a Video" do
-    Video.create(id:1, title: "Finding Nemo")
-    expect{ Video.find(1) }.not_to raise_error
+    Video.create(id:5, title: "Finding Nemo")
+    expect{ Video.find(5) }.not_to raise_error
   end
 
   it "saves video successfully" do
