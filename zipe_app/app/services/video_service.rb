@@ -1,10 +1,4 @@
-require 'rest-client'
-
-class VideoService
-  def initialize
-    @app_key ||= Rails.configuration.zipe_app_key
-  end
-
+class VideoService < ApiService
   def list_videos
     begin
       response = RestClient.get("https://api.zype.com/videos?app_key=#{@app_key}")

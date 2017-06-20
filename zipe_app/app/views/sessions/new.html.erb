@@ -1,0 +1,24 @@
+<h1>Log In</h1>
+<div class="depot_form">
+  <% if flash[:alert] %>
+    <p id="notice"><%= flash[:alert] %></p>
+  <% end %>
+  <%= form_tag do %>
+    <%= hidden_field :video, :id, name: "video_id", value:params[:video_id] %>
+
+    <fieldset>
+      <legend>Please Log In</legend>
+      <div>
+        <%= label_tag :name, 'Username:' %>
+        <%= text_field_tag :username, params[:username] %>
+      </div>
+      <div>
+        <%= label_tag :password, 'Password:' %>
+        <%= password_field_tag :password, params[:password] %>
+      </div>
+      <div>
+        <%= submit_tag "Login" %>
+      </div>
+    </fieldset>
+  <% end %>
+</div>

@@ -8,5 +8,7 @@ describe VideosHelper, type: :helper do
     expect(helper.video_player(video).include?("https:")).to be true 
     expect(helper.video_player(video).include?("script")).to be true 
     expect(helper.video_player(video).include?("id=")).to be true 
+    expect(helper.video_player(video).include?("zype_")).to be true 
+    expect(helper.video_player(video).index(/^\s+/)).to eq(nil)
   end
 end

@@ -15,7 +15,18 @@
   <%= @video.subscription_required %>
 </p>
 
-<%= video_player(@video) %>
+<% if @video.subscription_required %>
+  <% if @current_user %>
+    <%= video_player(@video) %>
+  <% else %>
+    <div>
+      <p><a href="<%= login_url %>?video_id=<%= @video.id %>">Login</a></p>
+      <p><a href="#">Subscribe</a>
+    </div> 
+  <% end %>
+<% else %>
+    <%= video_player(@video) %>
+<% end %>
 
 <%= link_to 'Edit', edit_video_path(@video) %> |
 <%= link_to 'Back', videos_path %>

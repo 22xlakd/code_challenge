@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Video, :type => :model do
   let(:first_video){ Video.create(title: "Almost Famous trailer", subscription_required: false) }
 
-  it "finds a video" do
+  it "finds a Video" do
     Video.create(id:1, title: "Finding Nemo")
     expect{ Video.find(1) }.not_to raise_error
   end
