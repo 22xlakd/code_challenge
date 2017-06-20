@@ -2,7 +2,7 @@ class VideoService < ApiService
   def list_videos
     begin
       response = RestClient.get("https://api.zype.com/videos?app_key=#{@app_key}")
-    rescue 
+    rescue RestClient::Unauthorized
       raise ActionController::RoutingError.new('Unauthorized')
     end
 

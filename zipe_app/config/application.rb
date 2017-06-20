@@ -23,6 +23,8 @@ module ZipeApp
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    config.zipe_app_key = 'XWny5j0V89yb1uZu6SI_D95EADV5FzBYldE9Ny0_q0GOzcWLiruPyhN-f2Pcyohf'
+    config.zype_app_key = 'XWny5j0V89yb1uZu6SI_D95EADV5FzBYldE9Ny0_q0GOzcWLiruPyhN-f2Pcyohf'
+    config.zype_client_id = '61255480307354ebd4d094482f2483adec9942637979aa5c3963ecbac469f943'
+    config.zype_client_secret = '926e632b2aa9758f60dbdf2f8de13bebd9a04dfd602de4c257b3f8b4a97cf0b8'
   end
 end

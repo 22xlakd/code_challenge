@@ -12,7 +12,7 @@ describe VideoService do
 
   context "#API returns 401 code" do
     it "raises a 404 error when api fails" do
-      Rails.configuration.zipe_app_key = "skdjaskldjaskljaklj"
+      Rails.configuration.zype_app_key = "skdjaskldjaskljaklj"
 
       expect{ subject.list_videos() }.to raise_error(ActionController::RoutingError, "Unauthorized")
     end

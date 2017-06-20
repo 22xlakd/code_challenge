@@ -43,4 +43,18 @@ describe User, :type => :model do
       expect(current_user.authenticate("123456789")).to be false
     end
   end
+
+  context "#get_access_token" do
+    let!(:user){ User.create(id: 10, username:"test@test.com", password:"password") }
+
+    it "returns user with access_token" do
+      expect(User.get_api_user("test@test.com","password")).to eq(user)
+      expect(User.get_api_user("test@test.com","password").access_token).not_to eq(nil)
+    end
+
+    it "returns nil when user doesn't exists" do
+      expect(User.get_api_user("inexistent@test.com","123456")).not_to eq(user)
+      expect(User.get_api_user("inexistent@test.com","123456")).to be nil
+    end
+  end
 end

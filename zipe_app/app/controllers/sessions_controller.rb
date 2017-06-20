@@ -3,8 +3,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(username: params[:username])
-    if user and user.authenticate(params[:password])
+    user = User.get_api_user(params[:username], params[:password])
+    if user and user.authenticate()
       env[:current_user] = user
       set_current_user
 
