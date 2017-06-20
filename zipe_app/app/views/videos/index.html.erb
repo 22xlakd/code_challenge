@@ -15,7 +15,7 @@
   <tbody>
     <% @videos.each do |video| %>
       <tr>
-        <td><%= link_to(video.title, video_path(video.id)) %></td>
+        <td><%= link_to(video.title, video_path(video.id), id: video.id) %></td>
         <td><%= link_to(image_tag(video.thumbnail, alt: video.title), video_path(video.id)) %></td>
         <td><%= video.subscription_required %></td>
         <td><%= link_to 'Show', video %></td>
