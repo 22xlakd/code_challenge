@@ -22,6 +22,7 @@ module ZipeApp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
     config.zype_app_key = 'XWny5j0V89yb1uZu6SI_D95EADV5FzBYldE9Ny0_q0GOzcWLiruPyhN-f2Pcyohf'
     config.zype_client_id = '61255480307354ebd4d094482f2483adec9942637979aa5c3963ecbac469f943'

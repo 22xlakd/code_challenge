@@ -1,24 +1,22 @@
-<h1>Log In</h1>
-<div class="depot_form">
-  <% if flash[:alert] %>
-    <p id="notice"><%= flash[:alert] %></p>
-  <% end %>
-  <%= form_tag do %>
-    <%= hidden_field :video, :id, name: "video_id", value:params[:video_id] %>
-
-    <fieldset>
-      <legend>Please Log In</legend>
-      <div>
-        <%= label_tag :username, 'Username:' %>
-        <%= text_field_tag :username, params[:username] %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-sm-8 col-sm-8">
+      <div class="contact_area wow fadeInLeftBig">
+        <h1>Log In</h1>
+        <% if flash[:alert] %>
+          <p id="notice"><%= flash[:alert] %></p>
+        <% end %>
+        <%= form_tag({},{class:"contact_form"}) do %>
+          <%= hidden_field :video, :id, name: "video_id", value:params[:video_id] %>
+          
+          <blockquote>Please Log In</blockquote>
+          <%= text_field_tag :username, params[:username], class:"form-control", placeholder:"Username (Required)" %>
+          <%= password_field_tag :password, params[:password], class:"form-control", placeholder:"Password (Required)" %>
+          
+          <%= submit_tag "Login" %>
+        
+        <% end %>
       </div>
-      <div>
-        <%= label_tag :password, 'Password:' %>
-        <%= password_field_tag :password, params[:password] %>
-      </div>
-      <div>
-        <%= submit_tag "Login" %>
-      </div>
-    </fieldset>
-  <% end %>
+    </div>
+  </div>
 </div>

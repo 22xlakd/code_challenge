@@ -1,32 +1,50 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @video.title %>
-</p>
-
-<p>
-  <strong>Thumbnail:</strong>
-  <%= @video.thumbnail %>
-</p>
-
-<p>
-  <strong>Subscription required:</strong>
-  <%= @video.subscription_required %>
-</p>
-
-<% if @video.subscription_required %>
-  <% if session[:user_id] %>
-    <%= video_player(@video) %>
-  <% else %>
-    <div>
-      <p><a href="<%= login_url %>?video_id=<%= @video.id %>">Login</a></p>
-      <p><a href="#">Subscribe</a>
-    </div> 
-  <% end %>
-<% else %>
-    <%= video_player(@video) %>
-<% end %>
-
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <p id="notice"><%= notice %></p>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-4">
+          <div class="left_sidebar">
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-6 col-sm-8">
+          <div class="middle_content">
+            <ol class="breadcrumb">
+              <li><a href="/">Home</a></li>
+              <li class="active">Video Details</li>
+            </ol>
+            <div class="single_page_area">
+              <h1><%= @video.title %></h1>
+              <% if @video.subscription_required %>
+                <% if session[:user_id] %>
+                  <%= video_player(@video) %>
+                <% else %>
+                  <div class="single_content">
+                    <blockquote>
+                      <p><b>To watch this video, subscription is required, please subscribe or login</b></p>
+                      <button class="btn btn-green" onclick="location.href='<%= "#{login_url}?video_id=#{@video.id}" %>';">Login</button>
+                      <button class="btn btn-orange">Subscribe</button>
+                    </blockquote>
+                  </div>
+                  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <% end %>
+              <% else %>
+                  <%= video_player(@video) %>
+              <% end %>
+              <br/>
+              <button class="btn default-btn" onclick="location.href='<%= videos_path %>';">Back</button>
+            </div>
+          </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="right_sidebar">
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
