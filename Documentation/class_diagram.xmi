@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI verified="false" xmlns:UML="http://schema.omg.org/spec/UML/1.3" xmi.version="1.2" timestamp="2017-06-21T19:51:22">
+<XMI verified="false" xmlns:UML="http://schema.omg.org/spec/UML/1.3" xmi.version="1.2" timestamp="2017-06-21T20:11:25">
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://umbrello.kde.org</XMI.exporter>
@@ -178,7 +178,7 @@
         </UML:Operation>
        </UML:Classifier.feature>
       </UML:Class>
-      <UML:Class isLeaf="false" namespace="Logical View" name="ApiService" isRoot="false" xmi.id="GYkum3eNg8wj" visibility="public" isSpecification="false" isAbstract="false">
+      <UML:Class isLeaf="false" namespace="Logical View" name="ApiService" isRoot="false" xmi.id="GYkum3eNg8wj" visibility="public" isSpecification="false" isAbstract="true">
        <UML:Classifier.feature>
         <UML:Attribute name="app_key" xmi.id="5eoyjR5b1pOs" visibility="private" isSpecification="false" type="VaLYe733tzHk"/>
         <UML:Attribute name="client_id" xmi.id="22LSkUWayjFu" visibility="private" isSpecification="false" type="VaLYe733tzHk"/>
@@ -203,7 +203,7 @@
          <classwidget showstereotype="1" usefillcolor="1" width="117" height="45" showattributes="1" showpubliconly="0" showattsigs="601" font="Noto Sans,10,-1,0,50,0,0,0,0,0" isinstance="0" textcolor="#000000" usesdiagramusefillcolor="0" showpackage="1" linewidth="0" showoperations="1" localid="ccIqzzuldKxn" showopsigs="601" xmi.id="9KkOIbnmqVTy" x="-3271" linecolor="#ff0000" y="-946" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1"/>
          <classwidget showstereotype="1" usefillcolor="1" width="188" height="63" showattributes="1" showpubliconly="0" showattsigs="601" font="Noto Sans,10,-1,0,50,0,0,0,0,0" isinstance="0" textcolor="#000000" usesdiagramusefillcolor="0" showpackage="1" linewidth="0" showoperations="1" localid="sbJ6nAc2WpXt" showopsigs="601" xmi.id="2mdpeEnPT7Cr" x="-2451" linecolor="#ff0000" y="-1354" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1"/>
          <classwidget showstereotype="1" usefillcolor="1" width="325" height="45" showattributes="1" showpubliconly="0" showattsigs="601" font="Noto Sans,10,-1,0,50,0,0,0,0,0" isinstance="0" textcolor="#000000" usesdiagramusefillcolor="0" showpackage="1" linewidth="0" showoperations="1" localid="iwaA2lzuMGy7" showopsigs="601" xmi.id="han2JntLZU9B" x="-2237" linecolor="#ff0000" y="-1343" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1"/>
-         <classwidget showstereotype="1" usefillcolor="1" width="140" height="90" showattributes="1" showpubliconly="0" showattsigs="601" font="Noto Sans,10,-1,0,50,0,0,0,0,0" isinstance="0" textcolor="#000000" usesdiagramusefillcolor="0" showpackage="1" linewidth="0" showoperations="1" localid="p6oZ4gEFAoNU" showopsigs="601" xmi.id="GYkum3eNg8wj" x="-2309" linecolor="#ff0000" y="-1488" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1"/>
+         <classwidget showstereotype="1" usefillcolor="1" width="140" height="90" drawascircle="0" showattributes="1" showpubliconly="0" showattsigs="601" font="Noto Sans,10,-1,0,50,0,0,0,0,0" isinstance="0" textcolor="#000000" usesdiagramusefillcolor="0" showpackage="1" linewidth="0" showoperations="1" localid="p6oZ4gEFAoNU" showopsigs="601" xmi.id="GYkum3eNg8wj" x="-2309" linecolor="#ff0000" y="-1488" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1"/>
         </widgets>
         <messages/>
         <associations>
